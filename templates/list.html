@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block head %}{{ super() }}
+<link rel = "stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+{% endblock %}{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+			<center><p style="color : green">{{message}}</p></center>
+ 		{% endfor %}
+	{% endif %}
+{% endwith %}
+{%if works%}
+{% for work in works%}
+<div class="list_container">
+	<h3>{{work.title}}</h3>
+	<p id='p_diff'>start : {{work.start_datetime}}  end : {{work.end_datetime}}</p>
+	<p id='p_diff'>{{work.discription}}</p>
+	{% if work.is_completed %}
+	<a href="{{url_for('main.change_status', work_id = work.word_id)}}"><button id='complete'>Complete</button></a>
+	{% else %}
+	<a href="{{url_for('main.change_status', work_id = work.word_id)}}"><button id='incomplete'>Incomplete</button></a>
+	{% endif %}
+	<a href="{{url_for('main.edit',work_id = work.word_id)}}"><button id='edit'>Edit</button></a>
+	<a href="{{url_for('main.delete',work_id = work.word_id)}}"><button id='delete'>Delete</button></a>
+</div>
+{% endfor %}
+{% else %}
+<center><h1 style="color:white;">None , Add new work to do </1></h1></center>
+{% endif %}
+{% endblock %}

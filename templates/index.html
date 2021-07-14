@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block head %}{{ super() }}
+<link rel = "stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+{% endblock %}{% block content %}
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+			<center><p style="color : green">{{message}}</p></center>
+ 		{% endfor %}
+	{% endif %}
+{% endwith %}
+<h1 style="color :white">Welcome, Make your To-Do list Now</h1>
+<img src="{{url_for('static',filename='image/Todo.gif')}}">
+<p style="color:white;font-family: cursive;font-size: 20px;">“Each day I will accomplish one thing on my to do list.”
+<br>― Lailah Gifty Akita</p>
+
+{% endblock %}
+

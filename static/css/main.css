@@ -1,0 +1,97 @@
+.add_container{
+	display: flex;
+ 	justify-content: center;
+  	align-items: center;
+	background-color: #222;
+	width : max-content;
+	height: max-content;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.list_container{
+	background-color : #55d6aa;
+	margin:auto;
+	width : 60%;
+	height : max-content ;
+	padding-left : 30px;
+	padding-bottom : 10px;
+	border-radius: 10px;
+	
+}
+#complete{
+	background-color : green;
+	border-radius: 10px;
+	
+}
+#incomplete{
+	background-color : #e9850a;
+	border-radius: 10px;
+	
+}
+#delete{
+    background-color : #ed4722;
+	border-radius: 10px;
+}
+#edit{
+    background-color : orange;
+		border-radius: 10px;
+}
+#p_diff{
+	color : black;
+}
+label{
+	color: white;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+}
+input[type='text'],input[type="datetime-local"]{
+	border:none;
+    border-bottom: 1px solid #1890ff;
+    padding: 5px 10px;
+    outline: none;
+    background-color: #222 ;
+    color : white;
+    margin-bottom : 30px;
+    width : 250px;
+    font-size : 20px;
+}
+textarea{
+  border: 3px solid #1890ff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize : none;
+  width : 350px;
+  height : 250px;
+  font-size : 20px;
+}
+input[type=submit]{
+	width: 100px;
+ 	justify-content: center;
+  	align-items: center;
+ 	font-size : 20px;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #1890ff;
+    font-weight: bold;
+    border:none;
+    border-radius: 15px;
+    margin-left: 0;
+}
+input[type=reset]{
+	width: 100px;
+ 	justify-content: center;
+  	align-items: center;
+ 	font-size : 20px;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #1890ff;
+    font-weight: bold;
+    border:none;
+    border-radius: 15px;
+    margin-left: 150px;
+}

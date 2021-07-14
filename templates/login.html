@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}{% block head %}{{ super() }}
+<link rel = "stylesheet" href="{{ url_for('static',filename='css/basic.css')}}">
+{% endblock %}{% block content %}
+<center><h1 style="color: white;">Login into your Account</h1></center>
+{% with messages = get_flashed_messages() %}
+	{% if messages %}
+		{% for message in messages %}
+			<center><p style="color : green">{{message}}</p></center>
+ 		{% endfor %}
+	{% endif %}
+{% endwith %}
+
+{% if error%}
+<center><p style="color : red">{{error}}</p></center>
+{% endif %}
+<div class="form_container">
+	<form action="/login" method="POST">
+		<p><label for="username">Username</label></p>
+		<p><input type="text" name="username" placeholder="Username" required></p>
+
+		<p><label for="password">Password</label></p>
+		<p><input type="password" name="password" placeholder="Enter your password" required></p>
+
+		<p><input type="submit" value ="Login">
+	</form>
+</div>
+{% endblock %}

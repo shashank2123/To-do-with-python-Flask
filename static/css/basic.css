@@ -1,0 +1,59 @@
+.form_container{
+	display: flex;
+ 	justify-content: center;
+  	align-items: center;
+	background-color: #222;
+	width : max-content;
+	height: max-content;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+label{
+  text-align: right;
+  width: 30;
+  display: block;
+  float: left;
+  clear: left;
+  margin-right: 3px;
+  cursor: pointer
+  cursor: pointer;
+  font-weight: bold;
+  font-size : 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+label:after { content: ": " }
+
+input[type=text],input[type=password]{
+   	border:none;
+    border-bottom: 1px solid #1890ff;
+    padding: 5px 10px;
+    outline: none;
+    background-color: #222 ;
+    width: 250px;
+    font-size: 20px;
+    color : white;
+    margin-bottom: 20px;
+ }
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%;
+    opacity: 1;
+ }
+
+ input[type=submit]{
+ 	width: 150px;
+ 	justify-content: center;
+  	align-items: center;
+ 	font-size : 20px;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #1890ff;
+    font-weight: bold;
+    border:none;
+    border-radius: 15px;
+    margin-left: 22%;
+ }

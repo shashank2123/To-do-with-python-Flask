@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block head %}{{ super() }}
+<link rel = "stylesheet" href="{{ url_for('static',filename='css/basic.css')}}">
+{% endblock %}{% block content %}
+<center><h1 style="color: white;">Create Account</h1></center>
+{% if error%}
+<center><p style="color : red">{{error}}</p></center>
+{% endif %}
+<div class="form_container">
+<form action="/signup" method="POST">
+	<p><label for="name">Name</label></p>
+	<p><input type="text" name="name" placeholder="Your Name" required></p>
+
+	<p><label for="username">Username</label></p>
+	<p><input type="text" name="username" placeholder="Username" required></p>
+
+	<p><label for="password">Password</label></p>
+	<p><input type="password" name="password" placeholder="Enter your password" required></p>
+
+	<input type="submit" value ="Sign Up">
+</form>
+</div>
+{% endblock %}
